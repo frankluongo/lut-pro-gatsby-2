@@ -47,6 +47,7 @@ gatsby develop
 - `gatsby-ssr.js`
   - Server Side Rendering API
 
+
 ## 03: Creating Pages
 - Create a new file in the pages folder
   - The name of the file will correlate to the route
@@ -66,8 +67,15 @@ export default ComponentName;
 - Add an `index.js` inside the `foldername` to make it the default
 - Gatsby uses reach router under the hood
 
-## 04: Working with Assets
 
+## 04: Working with Assets
+- Import assets into JS Files
+  - Gatsby will take care of caching and optimizing them for you
+```javascript
+import assetname from '../assets/assetname.extension';
+```
+- You can also create a `static` folder, which will allow you add files that won't be processed
+  - You will need a `with-prefix` function from Gatsby to get this to work
 
 ## 05: Intro to GraphQL
 
