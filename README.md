@@ -78,7 +78,21 @@ import assetname from '../assets/assetname.extension';
   - You will need a `with-prefix` function from Gatsby to get this to work
 
 ## 05: Intro to GraphQL
-
+- You can use the `graphiql` interface at localhost:8000/__graphql
+<br>
+Example Query:
+- Open with curly brackets
+- Graphiql will help autocomplete terms
+- CMD+Click an item to see its properties
+```graphql
+{
+  site {
+   siteMetadata {
+   	 title
+   }
+  }
+}
+```
 
 ## 06: GraphQL Static Queries
 
