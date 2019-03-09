@@ -84,7 +84,7 @@ Example Query:
 - Open with curly brackets
 - Graphiql will help autocomplete terms
 - CMD+Click an item to see its properties
-```graphql
+```
 {
   site {
    siteMetadata {
