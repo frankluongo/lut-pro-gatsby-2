@@ -178,6 +178,8 @@ Getting all the Markdown Files:
 ```
 
 ## 09: Our Query in React
+- We can run queries anywhere in Gatsby using `StaticQuery` and `graphql`
+- The suggested way to do this is to first get it working in the Graphiql interface, then copy and paste the query into React
 
 
 ## 10: Improving our Query with Filtering & Sorting
