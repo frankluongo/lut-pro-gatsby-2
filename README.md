@@ -155,7 +155,6 @@ This query will return all the files we have access to:
       node {
         extension,
         name
-
       }
     }
   }
@@ -163,7 +162,20 @@ This query will return all the files we have access to:
 ```
 
 ## 08: Working with Markdown
+- Install the `gatsby-transformer-remark`
 
+Getting all the Markdown Files:
+```graphql
+{
+  allMarkdownRemark {
+    edges {
+      node {
+        html
+      }
+    }
+  }
+}
+```
 
 ## 09: Our Query in React
 
