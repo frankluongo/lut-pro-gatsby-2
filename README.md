@@ -79,7 +79,6 @@ import assetname from '../assets/assetname.extension';
 
 ## 05: Intro to GraphQL
 - You can use the `graphiql` interface at localhost:8000/__graphql
-<br>
 Example Query:
 - Open with curly brackets
 - Graphiql will help autocomplete terms
