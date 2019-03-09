@@ -133,7 +133,34 @@ render={data => (
 ```
 
 ## 07: Plugins & Gatsby Source File System
+Check out the [Gatsby Plugins](https://www.gatsbyjs.org/plugins/)
 
+We're going to need two plugins
+- `gatsby-source-filesystem`
+  - This will allow us to reference Markdown files
+```
+npm install --save gatsby-source-filesystem
+```
+- `gatsby-transformer-remark`
+  - This will allow us to use the Markdown files we've referenced
+```
+npm install --save gatsby-transformer-remark
+```
+
+This query will return all the files we have access to:
+```graphql
+{
+  allFile {
+  	edges {
+      node {
+        extension,
+        name
+
+      }
+    }
+  }
+}
+```
 
 ## 08: Working with Markdown
 
