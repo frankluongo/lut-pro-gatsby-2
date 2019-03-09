@@ -48,7 +48,23 @@ gatsby develop
   - Server Side Rendering API
 
 ## 03: Creating Pages
+- Create a new file in the pages folder
+  - The name of the file will correlate to the route
+- Within that file:
+```javascript
+import React from 'react'
 
+const ComponentName = () => (
+  <div>
+    content
+  </div>
+)
+
+export default ComponentName;
+```
+- To add nested files, just do `foldername/file-name.js`
+- Add an `index.js` inside the `foldername` to make it the default
+- Gatsby uses reach router under the hood
 
 ## 04: Working with Assets
 
