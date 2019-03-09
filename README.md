@@ -205,10 +205,10 @@ query QueryName {
 ```graphql
 query BlogPosts {
   allMarkdownRemark(limit: 5, sort: {order: DESC, fields: [frontmatter___title]}) {
-    totalCount
+  totalCount
     edges {
       node {
-				excerpt
+			  excerpt
         frontmatter {
           title
           slug
@@ -221,7 +221,24 @@ query BlogPosts {
 ```
 
 ## 11: Gatsby Node
+[Gatsby's Node API](https://www.gatsbyjs.org/docs/node-apis/)
+- We have to use `require` syntax since this is node
+- Node provides us with path
 
+The file will end up looking like this to start:
+```javascript
+const path = require('path');
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+
+  createPage({
+    path: '/fakepage',
+    component: path.resolve('./src/components/postLayout.js'),
+  })
+
+}
+```
 
 ## 12: Creating Pages From Markdown Files
 
