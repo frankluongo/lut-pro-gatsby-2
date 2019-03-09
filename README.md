@@ -183,7 +183,42 @@ Getting all the Markdown Files:
 
 
 ## 10: Improving our Query with Filtering & Sorting
+Examples:
+- Limit number of items returned
+```graphql
+query QueryName {
+  queryField(limit: 1) {
+    edges {
+      node {
+        fontmatter {
+          title
+          slug
+        }
+      }
+    }
+  }
+}
+```
 
+
+- Limit and sort number of items returned
+```graphql
+query BlogPosts {
+  allMarkdownRemark(limit: 5, sort: {order: DESC, fields: [frontmatter___title]}) {
+    totalCount
+    edges {
+      node {
+				excerpt
+        frontmatter {
+          title
+          slug
+        }
+      }
+    }
+  }
+}
+}
+```
 
 ## 11: Gatsby Node
 
