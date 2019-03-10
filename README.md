@@ -1,5 +1,5 @@
 # LevelUpTutorials: Pro Gatsby 2 Course
-
+https://www.leveluptutorials.com/tutorials/pro-gatsby-2
 
 ## 1: Getting Started with Gatsby JS
 - Install Gatsby globally
@@ -279,7 +279,27 @@ exports.createPages = ({ graphql, actions }) => {
 ```
 
 ## 13: Page Query VS Static Query
+- Static Queries can be used anywhere but it doesn't accept parameters or use context
+- Page Queries must be used on pages
 
+- Page Queries have to get exported with your Component in order for them to work
+```javascript
+export const query = graphql`
+  query PostQuery {
+    markdownRemark(frontmatter: {
+      slug: {
+      eq: "/first-post"
+      }
+    }) {
+      html
+      frontmatter {
+        title
+        date
+      }
+    }
+  }
+`;
+```
 
 ## 14: Context in Page Queries
 
