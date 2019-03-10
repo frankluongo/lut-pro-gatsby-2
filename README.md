@@ -302,7 +302,36 @@ export const query = graphql`
 ```
 
 ## 14: Context in Page Queries
+- We can pass in parameters to our query
+- We add parentheses, pass in a `$slug` variable and use `String!` to indicate that it will be a type of string and it's required
+```graphql
+query PostQuery($slug: String!) {
+```
+- Our New Query will look like this:
+```graphql
+query PostQuery($slug: String!) {
+  markdownRemark(frontmatter: {
+    slug: {
+    eq: $slug
+    }
+  }) {
+    html
+    frontmatter {
+      title
+      date
+    }
+  }
+}
+```
+**NOTE:** Normally, you'd have to pass in the slug manually, but Gatsby.js automagically finds it an passes it in for you.
 
+Next, we add our Content:
+- We use this `dangerouslySetInnerHTML` to add our Markdown. This is scary, but the danger only comes in if you're letting users put HTML in here. You should be fine if you have control over the content being passed in
+```javascript
+<div dangerouslySetInnerHTML={{
+  __html: markdownRemark.html
+}} />
+```
 
 ## 15: Static Query From Scratch & Page Listing
 
