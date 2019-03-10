@@ -334,7 +334,7 @@ Next, we add our Content:
 ```
 
 ## 15: Static Query From Scratch & Page Listing
-
+- In this lesson we added a component called `listing` that had a query to pull in the last 10 posts
 
 ## 16: Styled Components in Gatsby
 
