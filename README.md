@@ -337,12 +337,47 @@ Next, we add our Content:
 - In this lesson we added a component called `listing` that had a query to pull in the last 10 posts
 
 ## 16: Styled Components in Gatsby
+- Grab the [Styled Components Plugin](https://www.gatsbyjs.org/docs/styled-components/) for Gatsby
 
 
 ## 17: Styling Part II
-
+- More styling
 
 ## 18: Gatsby Image
+- Using `gatsby-image`, we get some responsive Images
+```graphql
+{
+  file(relativePath: {
+    regex: "/bg/"
+  }) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        src
+      }
+    }
+  }
+}
+```
+
+```graphql
+{
+  file(relativePath: {
+    regex: "/bg/"
+  }) {
+    childImageSharp {
+      fluid(maxWidth: 1000) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+```
+- Reference the Image file using the Gatsby `Img` Tag
+```javascript
+import Img from 'gatsby-image'
+
+<Img fluid={data.file.childImageSharp.fluid} />
+```
 
 
 ## 19: React Spring
